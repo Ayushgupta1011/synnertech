@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synnertech</title>
+    <style>
+        /* General CSS */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e3f2fd;
+            margin: 0;
+            padding: 0;
+            color: #212121;
+        }
+
+        header {
+            background-color: #1565c0;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #1976d2;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #42a5f5;
+            color: #fff;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #1565c0;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Enhanced content section styling */
+        #features {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        /* Combo CSS classes */
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f0f4c3;
+            border: 1px solid #cddc39;
+            border-radius: 5px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .feature-item i {
+            margin-right: 10px;
+            color: #42a5f5;
+        }
+
+        .feature-item:hover {
+            background-color: #d4e157;
+            transform: translateY(-5px);
+        }
+
+        #contact {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        #contact h2 {
+            color: #1565c0;
+        }
+
+        #contact form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #contact label {
+            margin-top: 10px;
+        }
+
+        #contact input, #contact textarea {
+            margin-top: 5px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        #contact button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #1565c0;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #contact button:hover {
+            background-color: #42a5f5;
+        }
+
+        /* Transitions */
+        header, footer, nav ul li a, #contact button {
+            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+        }
+
+        header:hover, footer:hover {
+            background-color: #1976d2;
+            color: #e3f2fd;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+
+        header, footer {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        #content, #features, #contact {
+            animation: slideIn 1s ease-in-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            main {
+                padding: 10px;
+            }
+
+            #features, #contact {
+                padding: 10px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Synnertech</h1>
+        <nav>
+            <ul>
+                <li><a href="#content">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="content">
+            <p>Explore our innovative solutions.</p>
+        </section>
+        <section id="features">
+            <h2>Features</h2>
+            <ul>
+                <li class="feature-item"><i class="fas fa-cogs"></i> Cutting-edge technology</li>
+                <li class="feature-item"><i class="fas fa-lightbulb"></i> Innovative solutions</li>
+                <li class="feature-item"><i class="fas fa-headset"></i> Dedicated support</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Synnertech</p>
+    </footer>
+    <script>
+        // JavaScript for form submission
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('form');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                alert('Thank you for contacting us!');
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html>
